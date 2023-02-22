@@ -1,0 +1,36 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+/* HEADER */
+header{
+    min-height: 2rem;
+    background-color: #6a040f;
+    padding: 5rem 0;
+}
+.contenedor-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+    height: calc(2rem - 2rem);
+}
+
+
+
+.tabla-alcaldia{
+    
+}
