@@ -35,3 +35,5 @@ Route::get('tabladoseditar/password',[TabladosController::class, 'contra'])->nam
 
 Route::get('todosexport',[ExportController::class, 'exporttodos'])->name('todos');
 Route::get('alcaldiaexport',[ExportController::class, 'exportalcaldia'])->name('alcaldia');
+
+Route::get('generaruno/{id}',[TabladosController::class, 'documento'])->name('generar.documento');

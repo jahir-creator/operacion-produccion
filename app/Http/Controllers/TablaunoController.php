@@ -32,6 +32,7 @@ class TablaunoController extends Controller
         $tablaunos = DB::table('tablauno')
             ->join('areas', 'tablauno.id_area', '=', 'areas.id')
             ->select('tablauno.id', 'tablauno.numero', 'tablauno.denominacion', 'tablauno.nombre', 'tablauno.id_area', 'areas.area')
+
             ->get();
 
         $tablados = DB::table('tablados')
@@ -45,14 +46,15 @@ class TablaunoController extends Controller
     }
     public function update(Request $request, $id)
     {
-
+       
 
         $tablasdos = tablados::find($id);
         $tablasdos->numero = $request->numero;
         $tablasdos->denominacion = $request->denominacion;
         $tablasdos->nombre = $request->nombre;
+        $tablasdos->id_area = $request->area;
 
-        $tablasdos->save();
+        $tablasdos->update();
 
         return back();
 

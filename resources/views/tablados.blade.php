@@ -46,21 +46,30 @@
                     <th>CONTRASEÑA</th>
                     <th>IMPRIMIR</th>
                     <th>ACTUALIZAR</th>
+                    
                     @foreach($tabla as $tbd)
+                    
                     <tr>
+                    <form action="{{url('generaruno',$tbd->id)}}" method="get">
                         <td>{{$tbd->numero}}</td>
+                        <input type="hidden" value="{{$tbd->numero}}" name="numero">
                         <td>{{$tbd->denominacion}}</td>
+                        <input type="hidden" value="{{$tbd->denominacion}}" name="denominacion">
                         <td>{{$tbd->nombre}}</td>
+                        <input type="hidden" value="{{$tbd->nombre}}" name="nombre">
                         <td>{{$tbd->area}}</td>
                         <td>{{$tbd->correo}}</td>
+                        <input type="hidden" value="{{$tbd->correo}}" name="correo">
                         <td>{{$tbd->contrasena}}</td>
-                        <td><button>IMPRIMIR</button></td>
-                        
+                        <input type="hidden" value="{{$tbd->contrasena}}" name="contrasena">
+                       <td> <button type="submit">GUARDAR</button></td>
+                    
                         <td><a href="{{route('tablados.editar',$tbd->id)}}" value="{{$tbd->id}}">ACTUALIZAR</a></td>
                     </tr>
                    
-
+                    </form>
                     @endforeach
+                    
                 </table>
             </div>
 
