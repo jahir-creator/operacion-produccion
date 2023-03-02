@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('tablados', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('numero')->unique();
-            $table->string('denominacion', 80)->nullable(true);
-            $table->string('nombre', 80)->nullable(true);
+            $table->string('denominacion')->nullable(true);
+            $table->string('nombre')->nullable(true);
             $table->string('correo', 80)->nullable(true);
             $table->string('contrasena', 80)->nullable(true);
             //declaracion de llave

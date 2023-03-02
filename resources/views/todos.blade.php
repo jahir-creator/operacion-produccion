@@ -10,7 +10,8 @@
 
 <body>
     <div class="tabla-alcaldia">
-        <h3>ALCALDIA</h3>
+        <div class="">
+        <h3> OFICINA DE LA ALCALDIA</h3>
         <table>
             <thead>
                 <tr>
@@ -34,8 +35,9 @@
 
             </tbody>
         </table>
-
-        <h3>INFORMATICA</h3>
+        </div>
+        <div>
+        <h3>DIRECCION GENERAL DE GOBIERNO Y DE GESTION INTEGRAL DE RIESGOS Y PROTECCION CIVIL</h3>
         <table>
             <thead>
                 <tr>
@@ -48,6 +50,175 @@
             <tbody>
                 @foreach($tablados as $tba)
                 @if($tba->id_area === 2 )
+                <tr>
+                    <td>{{$tba->numero}}</td>
+                    <td>{{$tba->denominacion}}</td>
+                    <td>{{$tba->nombre}}</td>
+                    <td>{{$tba->correo}}</td>
+                </tr>
+                @endif
+                @endforeach
+            </tbody>
+        </table>
+        </div>
+
+        <h3>DIRECCION EJECUTIVA DE ASUNTOS JURIDICOS</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>NUMERO</th>
+                    <th>DENOMINACION</th>
+                    <th>NOMBRE</th>
+                    <th>CORREO</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($tablados as $tba)
+                @if($tba->id_area === 3 )
+                <tr>
+                    <td>{{$tba->numero}}</td>
+                    <td>{{$tba->denominacion}}</td>
+                    <td>{{$tba->nombre}}</td>
+                    <td>{{$tba->correo}}</td>
+                </tr>
+                @endif
+                @endforeach
+            </tbody>
+        </table>
+
+        <h3>DIRECCION GENERAL DE ADMINISTRACION</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>NUMERO</th>
+                    <th>DENOMINACION</th>
+                    <th>NOMBRE</th>
+                    <th>CORREO</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($tablados as $tba)
+                @if($tba->id_area === 4 )
+                <tr>
+                    <td>{{$tba->numero}}</td>
+                    <td>{{$tba->denominacion}}</td>
+                    <td>{{$tba->nombre}}</td>
+                    <td>{{$tba->correo}}</td>
+                </tr>
+                @endif
+                @endforeach
+            </tbody>
+        </table>
+
+        <h3>DIRECCION GENERAL DE OBRAS Y DESARROLLO URBANO</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>NUMERO</th>
+                    <th>DENOMINACION</th>
+                    <th>NOMBRE</th>
+                    <th>CORREO</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($tablados as $tba)
+                @if($tba->id_area === 5 )
+                <tr>
+                    <td>{{$tba->numero}}</td>
+                    <td>{{$tba->denominacion}}</td>
+                    <td>{{$tba->nombre}}</td>
+                    <td>{{$tba->correo}}</td>
+                </tr>
+                @endif
+                @endforeach
+            </tbody>
+        </table>
+
+        <h3>DIRECCION GENERAL DE SERVICIOS URBANOS</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>NUMERO</th>
+                    <th>DENOMINACION</th>
+                    <th>NOMBRE</th>
+                    <th>CORREO</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($tablados as $tba)
+                @if($tba->id_area === 6 )
+                <tr>
+                    <td>{{$tba->numero}}</td>
+                    <td>{{$tba->denominacion}}</td>
+                    <td>{{$tba->nombre}}</td>
+                    <td>{{$tba->correo}}</td>
+                </tr>
+                @endif
+                @endforeach
+            </tbody>
+        </table>
+
+        <h3>DIRECCION EJECUTIVA DE PLANEACION DEL DESARROLLO Y SUSTENTABILIDAD</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>NUMERO</th>
+                    <th>DENOMINACION</th>
+                    <th>NOMBRE</th>
+                    <th>CORREO</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($tablados as $tba)
+                @if($tba->id_area === 7 )
+                <tr>
+                    <td>{{$tba->numero}}</td>
+                    <td>{{$tba->denominacion}}</td>
+                    <td>{{$tba->nombre}}</td>
+                    <td>{{$tba->correo}}</td>
+                </tr>
+                @endif
+                @endforeach
+            </tbody>
+        </table>
+
+        <h3>DIRECCION GENERAL DE DESARROLLO SOCIAL</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>NUMERO</th>
+                    <th>DENOMINACION</th>
+                    <th>NOMBRE</th>
+                    <th>CORREO</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($tablados as $tba)
+                @if($tba->id_area === 8 )
+                <tr>
+                    <td>{{$tba->numero}}</td>
+                    <td>{{$tba->denominacion}}</td>
+                    <td>{{$tba->nombre}}</td>
+                    <td>{{$tba->correo}}</td>
+                </tr>
+                @endif
+                @endforeach
+            </tbody>
+        </table>
+
+        <h3>DIRECCION GENERAL DE PARTICIPACION CIUDADANA</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>NUMERO</th>
+                    <th>DENOMINACION</th>
+                    <th>NOMBRE</th>
+                    <th>CORREO</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($tablados as $tba)
+                @if($tba->id_area === 9 )
                 <tr>
                     <td>{{$tba->numero}}</td>
                     <td>{{$tba->denominacion}}</td>

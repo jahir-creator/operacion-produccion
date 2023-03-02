@@ -9,6 +9,7 @@ use App\Models\tablauno;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Facades\Auth;
 
 
 class TablaunoController extends Controller
@@ -16,6 +17,10 @@ class TablaunoController extends Controller
     //
     public function index()
     {
+        // if(Auth::check()){
+        //     return redirect()->route('importar');
+        // }
+        
         return view('importar');
     }
     public function importar(Request $request)
@@ -29,11 +34,12 @@ class TablaunoController extends Controller
     }
     public function tablauno()
     {
-        $tablaunos = DB::table('tablauno')
+        if(Auth::check()){
+            $tablaunos = DB::table('tablauno')
             ->join('areas', 'tablauno.id_area', '=', 'areas.id')
             ->select('tablauno.id', 'tablauno.numero', 'tablauno.denominacion', 'tablauno.nombre', 'tablauno.id_area', 'areas.area')
-
-            ->get();
+            // ->paginate(15);
+             ->get();
 
         $tablados = DB::table('tablados')
             ->join('areas', 'tablados.id_area', '=', 'areas.id')
@@ -41,8 +47,11 @@ class TablaunoController extends Controller
             ->get();
 
 
-
         return view('importar', compact('tablaunos', 'tablados'));
+            
+        }
+        return view('login');
+        
     }
     public function update(Request $request, $id)
     {
@@ -53,8 +62,10 @@ class TablaunoController extends Controller
         $tablasdos->denominacion = $request->denominacion;
         $tablasdos->nombre = $request->nombre;
         $tablasdos->id_area = $request->area;
-
-        $tablasdos->update();
+        $tablasdos->correo = "NO TIENE CORREO";
+        $tablasdos->contrasena = "NO TIENE CONTRASEÑA";
+      
+        $tablasdos->save();
 
         return back();
 

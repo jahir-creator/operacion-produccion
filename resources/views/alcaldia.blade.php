@@ -9,7 +9,7 @@
 <body>
 <div class="tabla-alcaldia" >
 
-    <h3>ALCALDIA</h3>
+    <h3>OFICINA DE LA ALCALDIA</h3>
    
                 <table>
                     <thead>

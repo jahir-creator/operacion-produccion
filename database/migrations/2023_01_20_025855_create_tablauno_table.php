@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('tablauno', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('numero')->unique();
-            $table->string('denominacion', 80)->nullable(true);
-            $table->string('nombre', 80)->nullable(true);
+            $table->string('denominacion')->nullable(true);
+            $table->string('nombre')->nullable(true);
             //declaracion de llave
             $table->unsignedBigInteger('id_area');
             //llaves foraneas

@@ -16,3 +16,4 @@ class tablauno extends Model //implements ToModel , WithHeadingRow
      protected $guarded = [];//asignacion masiva
     
 }
+ 
