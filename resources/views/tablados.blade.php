@@ -22,6 +22,7 @@
                 <div class="nav-header">
                     <a href="{{route('index')}}">PRINCIPAL</a>
                     <a href="{{route('importar.tablauno')}}">SUBIR ARCHIVO</a>
+                    <a href="{{route('otros.tabla')}}">OTROS CORREOS</a>
                     <a href="{{route('logout')}}"><img src="{{ asset('imagenes/cerrar-sesion.png') }}" alt=""></a>
                 </div>
             </div>

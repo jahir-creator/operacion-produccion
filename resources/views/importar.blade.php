@@ -21,6 +21,7 @@
                 <div class="nav-header">
                     <a href="{{route('index')}}">PRINCIPAL</a>
                     <a href="{{route('tablados.index')}}">ACTUALIZAR E IMPRIMIR</a>
+                    <a href="{{route('otros.tabla')}}">OTROS CORREOS</a>
                     <a href="{{route('logout')}}"><img src="{{ asset('imagenes/cerrar-sesion.png') }}" alt=""></a>
                 </div>
             </div>
@@ -75,7 +76,6 @@
                                     <input type="hidden" value="{{$tbu->nombre}}" name="nombre">
                                     <input type="hidden" value="{{$tbu->id_area}}" name="area">
                                 </tr>
-
 
                                 @endif
                                 @endif

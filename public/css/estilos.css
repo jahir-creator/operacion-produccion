@@ -40,34 +40,33 @@ header {
     color: #fff;
     height: 5rem;
 }
-.header-logo{
+.header-logo {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     justify-items: center;
 }
-.titulo-header h2{
+.titulo-header h2 {
     font-size: 3rem;
     font-weight: 500;
 }
-.nav-header{
+.nav-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 2rem;
 }
-.nav-header a{
+.nav-header a {
     text-decoration: none;
     color: #fff;
     text-align: center;
     height: 3.5rem;
 }
-.nav-header a:hover{
+.nav-header a:hover {
     font-size: 1.7rem;
-  border-bottom:2px solid #e85d04;
- 
+    border-bottom: 2px solid #e85d04;
 }
-.nav-header img{
+.nav-header img {
     width: 3rem;
     height: 3rem;
     margin: 0 auto;
@@ -328,13 +327,12 @@ nav {
 }
 fieldset {
     border: 2px solid #222;
-    box-shadow:  10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
 }
 fieldset:hover {
     border: 2px solid rgba(2, 107, 16, 0.75);
-    box-shadow:  10px 10px 10px 0px rgba(2, 107, 16, 0.75);
+    box-shadow: 10px 10px 10px 0px rgba(2, 107, 16, 0.75);
 }
-
 
 .formulario h2 {
     text-align: center;
@@ -354,11 +352,19 @@ fieldset:hover {
 .datos input {
     border-radius: 20px;
     text-align: center;
+    text-transform:uppercase;
+}
+div.datos .correo {
+    text-transform:lowercase;
+    text-transform: none;
+}
+div.datos .contrasena {
+    text-transform: none;
 }
 .datos input:focus {
     background: #edede9;
 }
-.boton-guardar button {
+.boton-guardar button{
     color: #fff;
     background-color: #1b4332;
     border-radius: 20px 2px 20px 2px;
@@ -371,6 +377,20 @@ fieldset:hover {
     background-color: #d00000;
     box-shadow: inset 0px 0px 17px 5px rgba(0, 0, 0, 0.75);
 }
+.boton-guardar .sub{
+    color: #fff;
+    background-color: #1b4332;
+    border-radius: 20px 2px 20px 2px;
+    height: 5rem;
+    width: 11rem;
+    margin-left: 3rem;
+}
+.boton-guardar .sub:hover {
+    cursor: pointer;
+    background-color: #d00000;
+    box-shadow: inset 0px 0px 17px 5px rgba(0, 0, 0, 0.75);
+}
+
 .generador {
     display: flex;
     flex-direction: column;
@@ -464,10 +484,10 @@ fieldset:hover {
     color: #fff;
     outline: none;
 }
-.boton-login{    
-   width: 100%;
-   margin: 0 auto;
-   padding: 5rem;
+.boton-login {
+    width: 100%;
+    margin: 0 auto;
+    padding: 5rem;
 }
 .boton-login button {
     background-color: rgb(144, 201, 183);
@@ -508,7 +528,7 @@ fieldset:hover {
     height: 30rem;
     justify-content: center;
     overflow: hidden;
-    transition: transform 100.9s; 
+    transition: transform 100.9s;
 }
 .separar {
     display: flex;
@@ -519,17 +539,23 @@ fieldset:hover {
     justify-content: center;
     align-content: center;
 }
-.card-flex a{
+.card-flex a {
     width: 100%;
 }
 
 .titulo h3 {
     font-size: 2.5rem;
     font-weight: 700;
-    background: linear-gradient(65deg,rgba(0, 104, 218),rgba(0, 149, 205),rgba(0, 177, 197),rgba(0, 217, 186));
-  -webkit-background-clip: text;
-  color: transparent;  
-  text-align: center;
+    background: linear-gradient(
+        65deg,
+        rgba(0, 104, 218),
+        rgba(0, 149, 205),
+        rgba(0, 177, 197),
+        rgba(0, 217, 186)
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
 }
 .icon {
     width: 100%;
@@ -544,9 +570,74 @@ fieldset:hover {
     margin: 0 auto;
 }
 .card-index:hover {
-   transform: scale(1.1); 
-   transition: transform 1s; 
+    transform: scale(1.1);
+    transition: transform 1s;
 }
-.main-inde h1{
-   text-align: center;
+.main-inde h1 {
+    text-align: center;
+}
+/* NUEVO OTRO */
+.contenedor-titulo {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+.boton-nuevo {
+    padding: 2rem 5rem;
+}
+.boton-nuevo a {
+    padding: 2rem 2rem;
+    /* border: 2px solid black; */
+    border-radius: 20px;
+    background-color: #1b4332;
+    color: #fff;
+    text-decoration: none;
+}
+.boton-nuevo a:hover {
+    background-color: #d00000;
+    box-shadow: inset 0px 0px 17px 5px rgba(0, 0, 0, 0.75);
+}
+
+.contenedor-titulo h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+}
+.table-otros {
+    text-align: center;
+}
+.table-otros td {
+    padding: 2rem 2rem;
+}
+tbody tr:nth-child(even) {
+    background-color: #adb5bd;
+}
+.table-otros tr:hover {
+    background-color: #b7e4c7;
+}
+.table-otros button {
+    color: #fff;
+    background-color: #1b4332;
+    border-radius: 20px;
+    height: 3rem;
+    width: 10rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.table-otros button:hover {
+    color: #fff;
+    background-color: #e85d04;
+}
+.table-otros a {
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #1b4332;
+    font-size: 1.5rem;
+    padding: .5rem 1.5rem .5rem 1.5rem;
+    cursor: pointer;
+}
+.table-otros a:hover {
+    color: #fff;
+    background-color: #e85d04;
 }

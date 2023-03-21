@@ -113,7 +113,7 @@ class TabladosController extends Controller
 
         $tablasdos = tablados::find($id);
 
-
+        $tablasdos->nombre = $request->nombre;
         $tablasdos->correo = $request->correo;
         $tablasdos->contrasena = $request->pass;
 
@@ -230,6 +230,7 @@ class TabladosController extends Controller
             return back($e->getCode());
         }
     }
+    
     public function impor()
     {
         return view('importartablados');

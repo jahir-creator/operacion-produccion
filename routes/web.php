@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\CorreosOtrosController;
 use App\Http\Controllers\ExportController;
 use App\Http\Controllers\TablaunoController;
 use App\Http\Controllers\TabladosController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LogoutController;
+use App\Models\CorreosOtros;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -53,6 +55,17 @@ Route::get('Depdsustentabilidadexport',[ExportController::class, 'exportDepdsust
 Route::get('Dgdsocialexport',[ExportController::class, 'exportDgdsocial'])->name('Dgdsocial');
 Route::get('Dgpciudadanaexport',[ExportController::class, 'exportDgpciudadana'])->name('Dgpciudadana');
 
+/**RUTA PARA CORREOS OTROS**/
+Route::get('correootros',[CorreosOtrosController::class, 'index'])->name('otros.tabla');
+
+Route::get('nuevootro',[CorreosOtrosController::class, 'nuevo'])->name('otros.nuevo');
+Route::get('nuevootro/generarcontra',[CorreosOtrosController::class, 'password'])->name('otros.password');
+Route::post('nuevootro',[CorreosOtrosController::class, 'nuevocapturar'])->name('otros.nuevocapturar');
+
+Route::get('otroseditar/{id}/editar',[CorreosOtrosController::class, 'editar'])->name('otros.editar');
+Route::get('otroseditar/editarcontra',[CorreosOtrosController::class, 'password'])->name('otros.passwordedit');
+Route::put('otroseditar/{id}',[CorreosOtrosController::class, 'update'])->name('otros.editarcapturar');
+Route::get('generarotros/{id}',[CorreosOtrosController::class, 'documento'])->name('otros.documento');
 
 
 Route::get('generaruno/{id}',[TabladosController::class, 'documento'])->name('generar.documento');

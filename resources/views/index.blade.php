@@ -61,6 +61,23 @@
             </div>
 
 
+            
+            <div class="card-index">
+                <div class="card-flex">
+                    <a href="{{route('otros.tabla')}}">
+                        <div class="separar">
+                            <div class="titulo">
+                                <h3>OTROS CORREOS</h3>
+                            </div>
+                            <div class="icon">
+                                <img src="{{ asset('imagenes/correo-electronico.png') }}" alt="" style="color: black;">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
         </div>
 
     </main>
